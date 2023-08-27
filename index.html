@@ -44,7 +44,7 @@
     <main>
 
         <!-- Search Section Start Here -->
-        <section class="search flex flex-col text-center lg:flex-col justify-center items-center container lg:mx-auto lg:mt-[150px] md:mt-[200px]">
+        <section class="search flex flex-col text-center lg:flex-col justify-center items-center container lg:mx-auto lg:mt-[200px] md:mt-[200px]">
 
             <div>
                 <h2 class="lg:text-4xl md:text-3xl text-2xl md:font-medium font-medium lg:font-semibold pb-6">Search your phone</h2>
@@ -57,10 +57,16 @@
 
         </section><!-- Search Section End Here -->
 
+        <!-- loading section start here -->
+        <div id="spin-load" class="flex hidden justify-center mt-10"><span class="loading w-10 loading-spinner text-error"></span></div>
+        <!-- loading section end here -->
+
 
         <!-- Product Section Start Here -->
         <section id="phone-section" class=" container mx-auto mt-5 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">         
         </section><!-- Product Section End Here -->
+        <!-- show more button start here -->
+        <div onclick="showAllProduct()" class="flex justify-center mt-5 "><button id="show-all" class="btn hidden  text-white bg-[--primary-color]">Show More</button></div> <!-- show more button end here -->
 
 
 

@@ -1,4 +1,4 @@
-const fetching = async (click) => {
+const fetching = async (click, isShowAll) => {
 
    const data = await fetch(`https://openapi.programming-hero.com/api/phones?search=${click}`)
 
@@ -6,18 +6,37 @@ const fetching = async (click) => {
 
    const phone = res.data
 
-
-   displayPhone(phone)
+   displayPhone(phone, isShowAll)
     
 }
 
 
 
-const displayPhone = (phones) => {
+const displayPhone = (phones , isShowAll) => {
     
     const phoneSection = document.getElementById('phone-section');
     phoneSection.textContent = ''
-    phones.forEach(phone => {
+
+    if (phones.length > 12 && !isShowAll) {
+
+        
+        document.getElementById('show-all').classList.remove('hidden')
+        
+    }else{
+        document.getElementById('show-all').classList.add('hidden')
+        
+    }
+
+    if (!isShowAll) {
+
+        phones = phones.splice(0,12)
+        
+    }
+
+    
+
+
+    phones.forEach((phone) => {
         
         const div = document.createElement('div');
 
@@ -36,11 +55,10 @@ const displayPhone = (phones) => {
 
       phoneSection.appendChild(div)
 
-      
-
-        console.log(phone);
         
     });
+
+    loadingSpin(false);
 
 }
 
@@ -48,12 +66,34 @@ document.getElementById('input-field').addEventListener('keypress', (event) => {
     const fieldValue = document.getElementById('input-field').value;
     
     if(event.key === 'Enter'){
+        loadingSpin(true)
         fetching(fieldValue);
+     
     }
 })
 
-const clickGetValue = () => {
+const clickGetValue = (isShowAll) => {
+    loadingSpin(true)
     const inputField = document.getElementById('input-field')
     const inputValue = inputField.value;
-    fetching(inputValue);
+    fetching(inputValue, isShowAll);
+    
+}
+
+
+const loadingSpin = (isLoading) => {
+    const loadPin = document.getElementById('spin-load');
+
+    if (isLoading) {
+
+        loadPin.classList.remove('hidden');
+        
+    }else{
+        loadPin.classList.add('hidden')
+    }
+}
+
+const showAllProduct = () => {
+    clickGetValue(true);
+    
 }
