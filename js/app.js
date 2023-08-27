@@ -44,6 +44,13 @@ const displayPhone = (phones) => {
 
 }
 
+document.getElementById('input-field').addEventListener('keypress', (event) => {
+    const fieldValue = document.getElementById('input-field').value;
+    
+    if(event.key === 'Enter'){
+        fetching(fieldValue);
+    }
+})
 
 const clickGetValue = () => {
     const inputField = document.getElementById('input-field')
