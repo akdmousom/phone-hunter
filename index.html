@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Header section start here -->
-    <header>
+    <header class="bg-[--secondary-color] md:h-[70vh] lg:h-[85vh] xl:h-[80vh] ">
+
+        <nav class="flex lg:pt-6 justify-between items-center lg:mx-20">
+            <h3 class="lg:text-2xl lg:font-bold font-medium text-xl"> Hot Gadgets </h3>
+            <button class="btn bg-[--primary-color] text-white lg:text-xl lg:font-bold font-medium">Sign Up</button>
+        </nav>
+
+        <section class="container mx-auto grid text-center lg:relative ">
+
+            <div>
+                <h1 class="lg:text-6xl text-2xl font-bold text-center pt-4 lg:font-bold">Apple Iphone 13 Pro Max</h1>
+                <p class="text-lg font-normal pt-4 text-center">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration
+                    in some form, by injected humou.</p>
+                </div>
+            <div class="pt-4">
+                <button class="btn w-[150px] bg-[--primary-color] text-white lg:text-xl lg:font-bold font-medium">Buy Now</button>
+            </div>
+
+            <div class="lg:absolute md:absolute pt-4 lg:pt-0 lg:top-[220px] md:top-[220px] md:left-[18%] lg:left-[25%] xl:left-[30%]">
+                <img class="w-[500px] h-[500]" src="./img/headerImg.png" alt="">
+            </div>
+        </section>
+
+
 
     </header><!-- Header section end here -->
 
@@ -26,6 +51,7 @@
     </footer><!-- footer section end here -->
 
 
-<script src="./js/app.js"></script>    
+    <script src="./js/app.js"></script>
 </body>
+
 </html>
