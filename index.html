@@ -24,14 +24,17 @@
 
             <div>
                 <h1 class="lg:text-6xl text-2xl font-bold text-center pt-4 lg:font-bold">Apple Iphone 13 Pro Max</h1>
-                <p class="text-lg font-normal pt-4 text-center">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration
+                <p class="text-lg font-normal pt-4 text-center">There are many variations of passages of Lorem Ipsum
+                    available, but the majority <br> have suffered alteration
                     in some form, by injected humou.</p>
-                </div>
+            </div>
             <div class="pt-4">
-                <button class="btn w-[150px] bg-[--primary-color] text-white lg:text-xl lg:font-bold font-medium">Buy Now</button>
+                <button class="btn w-[150px] bg-[--primary-color] text-white lg:text-xl lg:font-bold font-medium">Buy
+                    Now</button>
             </div>
 
-            <div class="lg:absolute md:absolute pt-4 lg:pt-0 lg:top-[220px] md:top-[220px] 2xl:left-[34%] md:left-[18%] lg:left-[25%] xl:left-[30%]">
+            <div
+                class="lg:absolute md:absolute pt-4 lg:pt-0 lg:top-[220px] md:top-[220px] 2xl:left-[34%] md:left-[18%] lg:left-[25%] xl:left-[30%]">
                 <img class="w-[500px] h-[500]" src="./img/headerImg.png" alt="">
             </div>
         </section>
@@ -44,29 +47,46 @@
     <main>
 
         <!-- Search Section Start Here -->
-        <section class="search flex flex-col text-center lg:flex-col justify-center items-center container lg:mx-auto lg:mt-[200px] md:mt-[200px]">
+        <section
+            class="search flex flex-col text-center lg:flex-col justify-center items-center container lg:mx-auto lg:mt-[200px] md:mt-[200px]">
 
             <div>
-                <h2 class="lg:text-4xl md:text-3xl text-2xl md:font-medium font-medium lg:font-semibold pb-6">Search your phone</h2>
+                <h2 class="lg:text-4xl md:text-3xl text-2xl md:font-medium font-medium lg:font-semibold pb-6">Search
+                    your phone</h2>
             </div>
 
             <div class="lg:flex  mx-auto">
-                <input id="input-field" type="text" placeholder="Search your phone" class="input bg-gray-200 w-full input-bordered md:w-[500px] lg:w-[500px]" />
-                <button onclick="clickGetValue ()" class="btn w-full lg:w-[150px] md:w-[150px] bg-[--primary-color] text-white">Search</button>
+                <input id="input-field" type="text" placeholder="Search your phone"
+                    class="input bg-gray-200 w-full input-bordered md:w-[500px] lg:w-[500px]" />
+                <button onclick="clickGetValue ()"
+                    class="btn w-full lg:w-[150px] md:w-[150px] bg-[--primary-color] text-white">Search</button>
             </div>
 
         </section><!-- Search Section End Here -->
 
         <!-- loading section start here -->
-        <div id="spin-load" class="flex hidden justify-center mt-10"><span class="loading w-10 loading-spinner text-error"></span></div>
+        <div id="spin-load" class="flex hidden justify-center mt-10"><span
+                class="loading w-10 loading-spinner text-error"></span></div>
         <!-- loading section end here -->
 
 
         <!-- Product Section Start Here -->
-        <section id="phone-section" class=" container mx-auto mt-5 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">         
+        <section id="phone-section"
+            class=" container mx-auto mt-5 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
         </section><!-- Product Section End Here -->
         <!-- show more button start here -->
-        <div onclick="showAllProduct()" class="flex justify-center mt-5 "><button id="show-all" class="btn hidden  text-white bg-[--primary-color]">Show More</button></div> <!-- show more button end here -->
+        <div onclick="showAllProduct()" class="flex justify-center mt-5 "><button id="show-all"
+                class="btn hidden  text-white bg-[--primary-color]">Show More</button></div>
+        <!-- show more button end here -->
+
+        <!-- Modal Section Start Here -->
+        <!-- You can open the modal using ID.showModal() method -->
+        <div class="modal-container">
+            <dialog id="my_modal_3" class="modal">
+                
+            </dialog>
+        </div>
+
 
 
 

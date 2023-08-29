@@ -48,7 +48,7 @@ const displayPhone = (phones , isShowAll) => {
           <h2 class="card-title">${phone.phone_name}</h2>
           <p>${phone.phone_name}</p>
           <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
+            <button onclick="detailShow('${phone.slug}')" class="btn btn-primary">Show Details</button>
           </div>
         </div>
       </div>`
@@ -97,3 +97,29 @@ const showAllProduct = () => {
     clickGetValue(true);
     
 }
+
+const detailShow = async (id) => {
+
+    const data = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+    const res = await data.json();
+
+   console.log(res.data.name);
+
+   const mainDiv = document.getElementById('my_modal_3');
+   const divelement = document.createElement('div');
+   divelement.id.add = 'modalInner';
+   divelement.innerHTML= (`<form method="dialog" class="modal-box">
+   <button class="btn btn-sm  btn-circle btn-ghost absolute right-2 top-2">✕</button>
+   <h3 class="font-bold text-lg">${res.data.name}</h3>
+   <p class="py-4">Press ESC key or click on ✕ button to close</p>
+ </form>`)
+
+ mainDiv.appendChild(divelement);
+ mainDiv.showModal();
+ 
+
+   
+
+
+}
+
