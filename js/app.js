@@ -106,6 +106,7 @@ const detailShow = async (id) => {
    console.log(res.data.name);
 
    const mainDiv = document.getElementById('my_modal_3');
+   mainDiv.innerHTML="";
    const divelement = document.createElement('div');
    divelement.id.add = 'modalInner';
    divelement.innerHTML= (`<form method="dialog" class="modal-box">
